@@ -1,1 +1,16 @@
-NLP yani Doğal Dil İşleme, doğal dillerin kurallı yapısının çözümlenerek anlaşılması veya yeniden üretilmesi amacını taşır.Bu çözümlemenin insana getireceği kolaylıklar, yazılı dokümanların otomatik çevrilmesi, soru-cevap makineleri, otomatik konuşma ve komut anlama, konuşma sentezi, konuşma üretme, otomatik metin özetleme, bilgi sağlama gibi birçok başlıkla özetlenebilir. Bilgisayar teknolojisinin yaygın kullanımı, bu başlıklardan üretilen uzman yazılımların gündelik hayatımızın her alanına girmesini sağlamıştır. Örneğin, tüm kelime işlem yazılımları birer imlâ düzeltme aracı taşır. Bu araçlar aslında yazılan metni çözümleyerek dil kurallarını denetleyen doğal dil işleme yazılımlarıdır.
+#Sayisal degerlerin yok edilmesi
+def remove_numeric(value):
+    bfr = [item for item in value if not item.isdigit()]
+    bfr = "".join(bfr)
+    return bfr
+
+
+    def pre_processing(value):
+    return [remove_numeric(remove_emoji
+                          (remove_single_character
+                           (remove_noktalama
+                            (remove_link
+                             (remove_hash
+                              (remove_username
+                               (stem_word(word))))))))
+                               for word in value.split()]
